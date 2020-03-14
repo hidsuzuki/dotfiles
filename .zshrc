@@ -1,26 +1,5 @@
 echo "zshrc"
 
-## glsのaliasをlsに設定してオプション追加
-##alias ls="gls --color"
-## ゴミ箱に入れる
-##alias rm="trash"
-#
-#alias ll="ls -al"
-#
-## この行は現在のパスを表示する設定です。ブランチを表示して色をつける設定とは関係ありません
-#RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
-#
-#autoload -Uz vcs_info
-#setopt prompt_subst
-#zstyle ':vcs_info:git:*' check-for-changes true
-#zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-#zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-#zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-#zstyle ':vcs_info:*' actionformats '[%b|%a]'
-#precmd () { vcs_info }
-#RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
-
-
 # 少し凝った zshrc
 # License : MIT
 # http://mollifier.mit-license.org/
@@ -143,7 +122,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 # エイリアス
 
 alias la='ls -a'
-alias ll='ls -l'
+alias ll='ls -al'
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -160,6 +139,12 @@ alias -g G='| grep'
 
 # nvim
 alias vim='nvim'
+
+# git
+alias gs='git status'
+alias gb='git branch'
+alias gsw='git switch'
+alias gr='git restore'
 
 
 # C で標準出力をクリップボードにコピーする

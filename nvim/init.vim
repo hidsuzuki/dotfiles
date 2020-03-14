@@ -34,3 +34,10 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+""""""""""""""
+" .vimrc
+""""""""""""""
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
